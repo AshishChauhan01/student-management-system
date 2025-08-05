@@ -5,6 +5,10 @@ body {
   box-sizing: border-box;
 }
 
+.main-content {
+  padding-top: 70px;
+}
+
 header {
   background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
