@@ -25,13 +25,13 @@ class StudentController extends Controller
     public function addStudent(Request $req)
     {
         $req->validate([
-            'name' => 'required | AlphaNumeric',
+            'name' => 'required | string',
             'email' => 'required | email',
-            'contact' => 'required | Numeric | between 9:12',
-            'branch' => 'required',
-            'university' => 'required',
-            'city' => 'required',
-            'state' => 'required',
+            'contact' => 'required | numeric | digits_between: 9,12',
+            'branch' => 'required | string',
+            'university' => 'required | string',
+            'city' => 'required | string',
+            'state' => 'required | string'
         ]);
         $student = DB::table('students')
             ->insert([
