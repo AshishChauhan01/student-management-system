@@ -22,10 +22,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('students.index');
 // });
 
-Route::get('/', [StudentController::class, 'show']);
+Route::get('/', [StudentController::class, 'show'])->name('home');
 Route::get('view/{id}', [StudentController::class, 'view']);
 
 Route::get('update/{id}', [StudentController::class, 'updateStudent']);
 Route::get('delete/{id}', [StudentController::class, 'deleteStudent']);
 Route::get('add-student', [StudentController::class, 'addForm'])->name('add-student');
-Route::get('add', [StudentController::class, 'addStudent'])->name('add');
+Route::post('add', [StudentController::class, 'addStudent'])->name('add');

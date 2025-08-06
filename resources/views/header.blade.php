@@ -8,7 +8,7 @@
             </div>
             <div class="col-md-6">
                 <ul>
-                    <li><a href="">Home</a></li>
+                    <li><a href="{{route('home')}}">Home</a></li>
                     <li><a href="{{route('add-student')}}">Add Student</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
