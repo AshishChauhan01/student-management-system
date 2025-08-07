@@ -9,8 +9,8 @@
         <p>{{$student->email}}</p>
         <p>{{$student->contact}}</p>
         <p>{{$student->branch}}</p>
-        <p>{{$student->city}}</p>
-        <p>{{$student->state}}</p>
+        <p>{{$student->city_name}}</p>
+        <p>{{$student->state_name}}</p>
         <p>{{$student->university}}</p>
     </div>
 </div>

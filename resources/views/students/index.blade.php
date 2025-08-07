@@ -2,6 +2,13 @@
 @section('section')
     <div class="container">
         <h2 class="text-center my-4">Students Data</h2>
+        @if(session('status'))
+            <div class="mb-4">
+                <span class="alert alert-sm alert-success">
+                    {{ session('status')}}
+                </span>
+            </div>
+        @endif
         <table class="table table-striped table-bordered ">
             <thead>
                 <tr class="text-center">
@@ -28,8 +35,8 @@
                         <td>{{$student->state_name}}</td>
                         <td>{{$student->university}}</td>
                         <td><a href="view/{{$student->id}}" class="btn btn-sm btn-info">View</a></td>
-                        <td><a href="" class="btn btn-sm btn-warning">Update</a></td>
-                        <td><a href="" class="btn btn-sm btn-danger">Delete</a></td>
+                        <td><a href="{{route('update-form', $student->id)}}" class="btn btn-sm btn-warning">Update</a></td>
+                        <td><a href="{{route('student-delete', $student->id)}}" class="btn btn-sm btn-danger" onclick="return confirm('Are You sure?')">Delete</a></td>
                     </tr>
                 @endforeach
             </tbody>
